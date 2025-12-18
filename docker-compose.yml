@@ -1,0 +1,39 @@
+services:
+  pricing-api:
+    build: ./pricing-api
+    container_name: pricing-api
+    ports:
+      - "8000:8000"
+    networks:
+      - property-network
+
+  property-backend:
+    build: ./property-portal/backend
+    container_name: property-backend
+    ports:
+      - "8001:8000"
+    volumes:
+      - ./property-portal/backend:/app
+    command: uvicorn main:app --host 0.0.0.0 --port 8000 --reload
+    depends_on:
+      - pricing-api
+    networks:
+      - property-network
+
+  property-frontend:
+    build: ./property-portal/frontend
+    container_name: property-frontend
+    ports:
+      - "3000:3000"
+    volumes:
+      - ./property-portal/frontend:/app
+      - /app/node_modules
+    command: npm run dev
+    depends_on:
+      - property-backend
+    networks:
+      - property-network
+
+networks:
+  property-network:
+    driver: bridge
