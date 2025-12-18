@@ -99,4 +99,6 @@ Responsive charts using ResponsiveContainer
 
 🐳 Dockerized frontend + backend
 
+## System Design
+Refer to system-design.md
 
