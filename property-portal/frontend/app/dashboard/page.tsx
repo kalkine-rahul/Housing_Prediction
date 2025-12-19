@@ -60,9 +60,9 @@ export default function DashboardPage() {
 
   return (
     <div className="p-6 max-w-7xl mx-auto">
-      <h1 className="text-3xl font-bold mb-6">📊 Market Dashboard</h1>
+      <h1 className="text-3xl font-bold mb-6"> Market Dashboard</h1>
 
-      {/* SUMMARY */}
+    
       {summary && (
         <div className="grid grid-cols-2 md:grid-cols-4 gap-4 mb-8">
           <div className="p-4 bg-white shadow rounded">
@@ -80,7 +80,8 @@ export default function DashboardPage() {
         </div>
       )}
 
-      {/* FILTER */}
+
+      
       <div className="mb-6">
         <input
           type="number"
@@ -114,6 +115,8 @@ export default function DashboardPage() {
         </div>
       </div>
 
+
+      
     
    <div className="mb-10 py-5 px-4 bg-white rounded shadow">
   <h2 className="font-semibold mb-3">Price Trend</h2>
