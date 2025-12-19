@@ -1,4 +1,4 @@
-from fastapi import FastAPI
+from fastapi import FastAPI, HTTPException
 from fastapi.middleware.cors import CORSMiddleware
 from models import PropertyData
 from services import get_price_estimate
@@ -16,10 +16,16 @@ history = []
 
 @app.post("/api/estimate")
 def estimate(data: PropertyData):
-    result = get_price_estimate(data.dict())
+    result = get_price_estimate(data.model_dump())
+    if result is None:
+        raise HTTPException(
+            status_code=503,
+            detail="Pricing API is currently unavailable"
+        )
+
     if "predicted_prices" in result:
         history.append({
-            "input": data.dict(),
+            "input": data.model_dump(),
             "price": result["predicted_prices"][0]
         })
     return result
