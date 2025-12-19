@@ -7,6 +7,6 @@ def get_price_estimate(property_data: dict):
         response.raise_for_status()
         return response.json()
     except requests.RequestException as e:
-        print("Error calling Pricing API:", e)  # <-- log actual error
+        print("Error calling Pricing API:", e) 
         return {"error": "Pricing API is currently unavailable."}
 
