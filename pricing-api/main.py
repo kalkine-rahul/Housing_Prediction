@@ -6,7 +6,8 @@ from typing import List
 
 app = FastAPI(title="Housing Price Prediction API")
 
-# Load model
+
+
 model = joblib.load("model/house_price_model.pkl")
 
 class HousePrediction(BaseModel):
@@ -20,8 +21,7 @@ class HousePrediction(BaseModel):
     school_rating : int
 
 
-    #making endpoint
-    #health Endpoint with decorator usingh @app.get
+    
 
 @app.get("/health")
 def health():
