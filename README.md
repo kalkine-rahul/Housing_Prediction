@@ -1,23 +1,23 @@
-Market Dashboard – Readme
-📊 Market Dashboard (Next.js + Recharts)
+
+ Market Dashboard (Next.js + Recharts)
 
 A modern Real Estate Market Dashboard built with Next.js (App Router), React, Tailwind CSS, and Recharts. The dashboard visualizes property market data such as average prices by location, price trends over time, and overall market summaries using clean, responsive charts.
 
-🚀 Features
+Features
 
-📈 Price Trend Analysis using Recharts BarChart
+Price Trend Analysis using Recharts BarChart
 
-🏙️ Average Price by Location
+Average Price by Location
 
-🔍 Filter by Minimum Average Price
+ Filter by Minimum Average Price
 
-📊 Market Summary Cards (Avg price per sqft, total listings)
+Market Summary Cards (Avg price per sqft, total listings)
 
-⚡ Fast & Responsive UI (Tailwind + Recharts)
+Fast & Responsive UI (Tailwind + Recharts)
 
-🔗 API-driven dashboard (FastAPI)
+API-driven dashboard (FastAPI)
 
-🛠️ Tech Stack
+Tech Stack
 Frontend
 
 Next.js 14 (App Router)
@@ -37,10 +37,9 @@ FastAPI / Node.js REST API
 Endpoint: GET /api/market-data
 
 
-📦 Installation & Setup
 App will be available at: http://localhost:3000
 
-📊 Charts Used (Recharts)
+Charts Used (Recharts)
 Price Trend
 
 BarChart
@@ -67,8 +66,8 @@ Separation of data & presentation
 
 Responsive charts using ResponsiveContainer
 
-📥 CSV export
-🐳 Dockerized frontend + backend
+ CSV export
+Dockerized frontend + backend
 
 ## System Design
 Refer to system-design.md
