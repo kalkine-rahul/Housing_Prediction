@@ -1,8 +1,6 @@
 
  Market Dashboard (Next.js + Recharts)
 
-A modern Real Estate Market Dashboard built with Next.js (App Router), React, Tailwind CSS, and Recharts. The dashboard visualizes property market data such as average prices by location, price trends over time, and overall market summaries using clean, responsive charts.
-
 Features
 
 Price Trend Analysis using Recharts BarChart
