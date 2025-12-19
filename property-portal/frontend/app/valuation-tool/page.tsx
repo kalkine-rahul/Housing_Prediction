@@ -101,7 +101,7 @@ export default function ValuationPage() {
               <div className="absolute inset-0 h-1/2 bg-gray-50"></div>
               <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                 <div className="max-w-4xl mx-auto">
-                    <dl className="rounded-lg bg-white shadow-lg sm:grid sm:grid-cols-3">
+                    <dl className="rounded-lg bg-white shadow-lg sm:grid text-center">
                         <div className="flex flex-col border-b border-gray-100 p-3 text-center sm:border-0 sm:border-r">
                             <dt className="order-2 mt-2 text-lg leading-6 font-medium text-gray-500">
                               Estimate Price
